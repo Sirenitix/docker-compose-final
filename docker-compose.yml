@@ -3,7 +3,7 @@ services:
     image:
       sirenitix/jusan-fastapi-final:nurs
     ports:
-      - 8080:8080
+      - 8000:8000
     container_name:
       jusan-compose-final
     restart: on-failure    
@@ -11,7 +11,7 @@ services:
     image:
       nginx:mainline
     ports:
-      - 8787:80
+      - 8787:82
     volumes:
       - ./example/:/var/www/example/
       - ./example/:/usr/share/nginx/html
@@ -21,3 +21,4 @@ services:
       - api
     container_name: jusan-nginx-final
     restart: on-failure   
+
